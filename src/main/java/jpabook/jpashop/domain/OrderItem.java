@@ -8,6 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Getter @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class OrderItem {
 
     @Id
@@ -26,6 +27,8 @@ public class OrderItem {
 
     private int orderPrice;
     private int count;
+    
+    
 
     //==썡썽 몌써뜨 ==//
     public static OrderItem createOrderItem(Item item, int orderPrice, int count) {
