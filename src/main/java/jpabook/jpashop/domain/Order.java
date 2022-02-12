@@ -32,7 +32,7 @@ public class Order {
     @JoinColumn(name = "delivery_id")
     private Delivery delivery;
 
-    private LocalDateTime orderData;//주문시간
+    private LocalDateTime orderDate;//주문시간
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status; //주문상태 [ORDDER, CANCEL]
@@ -65,7 +65,7 @@ public class Order {
             order.addorderItem(orderItem);
         }
         order.setStatus(OrderStatus.ORDER);
-        order.setOrderData(LocalDateTime.now());
+        order.setOrderDate(LocalDateTime.now());
         return order;
     }
 
